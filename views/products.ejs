@@ -1,0 +1,17 @@
+<h1>Listado de productos</h1>
+
+<% for (let i = 0; i < products.length; i++) { %>
+    <div>
+        <h2><%= products[i].name %></h2>
+        <p><%= products[i].description %></p>
+        <p><%= products[i].price %></p>
+        <img src="images/<%= products[i].image %>" alt="<%= products[i].name %>">
+        
+        <a href="/products/<%= products[i].id %>">Ver detalle</a>
+        <a href="/products/<%= products[i].id %>/edit">Editar</a>
+        <a href="/products/<%= products[i].id %>/delete">Eliminar</a>
+    
+    </div>
+<% } %>
+
+<a href="/products/create">Crear producto</a>

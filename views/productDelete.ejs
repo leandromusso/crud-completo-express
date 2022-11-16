@@ -1,0 +1,7 @@
+<h1>Estás seguro que querés eliminar el producto <%= product.name %></h1>
+
+<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+
+    <button type="submit">Eliminar</button>
+
+</form>

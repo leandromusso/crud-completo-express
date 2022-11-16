@@ -1,0 +1,24 @@
+<h1>Crear producto</h1>
+
+<% if(locals?.errors) { %>
+    <% if(errors.name) { %>
+        <%= errors.name.msg %>
+    <% } %>
+    <% if(errors.price) { %>
+        <%= errors.price.msg %>
+    <% } %>
+<% } %>
+
+<form action="/products" method="POST">
+    <label for="name">Nombre:</label>
+    <input type="text" name="name" id="name">
+
+    <label for="description">Descripción:</label>
+    <input type="text" name="description" id="description">
+
+    <label for="price">Precio:</label>
+    <input type="number" name="price" id="price">
+
+    <button type="submit">Crear</button>
+
+</form>
